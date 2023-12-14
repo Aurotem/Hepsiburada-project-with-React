@@ -17,9 +17,10 @@ export default function Product({ product }) {
   }
 
   return (
-    <div className="w-72 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-3 my-3 pb-2">
-
+    <div className="w-72 max-w-sm bg-white border border-stone-200 rounded-lg shadow dark:bg-stone-800 dark:border-stone-700 mx-3 my-3 pb-2">
+      <div className="h-44 sm:h-52 xl:h-44 2xl:h-44 py-2 px-2">
         <ProductImages images={product.images} />
+      </div>
 
       <div className="px-5 pb-1">
         <a href="#">
@@ -30,7 +31,7 @@ export default function Product({ product }) {
             {product.title}
           </h5>
           <p className="text-md tracking-tight text-gray-800 dark:text-stone-200">
-            {product.description}
+            {product.description.slice(0,41) + '...'}
           </p>
         </a>
         <div className="flex items-center mt-2.5 mb-5">

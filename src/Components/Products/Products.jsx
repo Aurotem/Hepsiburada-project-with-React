@@ -1,11 +1,5 @@
 import Product from "./Product";
-
-let product;
-await fetch("https://dummyjson.com/products")
-  .then((res) => res.json())
-  .then((data) => (product = data));
-
-  console.log(product)
+import product from "../../assets/data";
 
   export default function Products( { parameter = '' }) {
 
@@ -21,10 +15,13 @@ await fetch("https://dummyjson.com/products")
         });
         return arr
     }
-    return (
+    return (<>
 <div className="grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols:2 sm:grid-cols-2 2xl:grid-cols-6 justify-items-center px-12">
 
 {productGenerator(product['products'], parameter)}
+
 </div>
+<p className="text-stone-800 dark:text-stone-200 text-center w-full ">Sayfanın sonuna geldiniz.</p>
+</>
     )
   }
