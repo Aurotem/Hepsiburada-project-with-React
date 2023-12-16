@@ -1,8 +1,7 @@
 import OfferBanner from "./Components/Highlights/OfferBanner";
 import Navigation from "./Components/Navigation/Navigation";
-import Products from "./Components/Products/Products";
 import Highlights from "./Components/Highlights/Highlights";
-import Filter from "./Components/Products/Filters";
+import Filters from "./Components/Products/Filters";
 
 function App() {
   return (
@@ -10,8 +9,7 @@ function App() {
       <OfferBanner/>
       <Navigation />
       <Highlights />
-      <Filter/>
-      <Products />
+      <Filters />
     </div>
   );
 }
