@@ -34,26 +34,27 @@ export default function Product({ product }) {
             {product.description.slice(0,41) + '...'}
           </p>
         </a>
-        <div className="flex items-center mt-2.5 mb-5">
+        <div className="flex items-center mt-5 mb-2.5">
           <div className="flex items-center space-x-1 rtl:space-x-reverse">
             {calcStars(Math.round(product.rating))}
+            
           </div>
           <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">
-            {Math.round(product.rating) + ".0"}
+            {Math.round(product.rating)}
           </span>
         </div>
-        <div className="flex items-center justify-between">
-          <div className="flex flex-col">
+        <div className="flex items-center justify-start flex-col">
+          <div className="flex w-full mb-2 items-center">
             <span className="text-3xl font-bold text-gray-900 dark:text-white">
               ${product.price}
             </span>
-            <span className="bg-green-100 text-green-800 text-xs font-semibold px-1.5 py-0.5 rounded dark:bg-green-200 dark:text-green-800 text-center">
+            <span className="bg-green-100 text-green-800 text-xs font-semibold px-1.5 py-0.5 rounded dark:bg-green-200 dark:text-green-800 text-center w-1/2 h-fit ml-auto">
               {product.discountPercentage + "% Discount!"}
             </span>
           </div>
           <a
             href="#"
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-full"
           >
             Add to cart
           </a>
