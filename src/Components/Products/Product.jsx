@@ -2,6 +2,7 @@ import ProductImages from "./ProductImages";
 import Star from "./Star";
 
 export default function Product({ product }) {
+  
   function calcStars(rate) {
     let arr = [];
     let i = 0;
