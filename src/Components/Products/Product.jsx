@@ -4,19 +4,17 @@ import basket from "../../assets/basket";
 
 export default function Product({ product }) {
   function handleAddToBasket(i) {
-    for(let a of basket){
-      if(i.title == a.title){
+    for(let a in basket){
+      if(i.title == basket[a].title){
         let obj = {
-          ...a,
-          quantity: a.quantity ? a.quantity += 1 : 1
+          ...basket[a],
+          quantity: basket[a].quantity ? basket[a].quantity += 1 : 2
         }
-        a = obj
-        console.log(basket)
+        basket[a] = obj
         return 1
       }
     }
     basket.push(i)
-    console.log(basket)
   }
 
   function calcStars(rate) {

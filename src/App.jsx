@@ -11,11 +11,11 @@ function App() {
   const [userLogged, setUserLogged] = useState({loginOpen: false,isLogged: false, user: null});
 
   function logUser(userLogin) {
-    setUserLogged((prev) => ({
+    setUserLogged({
       loginOpen: userLogin.loginOpen,
       isLogged: userLogin.isLogged,
       user: userLogin.user
-    }));
+    });
   }
   return (
     <>

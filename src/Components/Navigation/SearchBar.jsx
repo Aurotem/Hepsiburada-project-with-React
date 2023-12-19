@@ -1,6 +1,4 @@
-import { createContext, useContext, useRef } from "react";
-
-export const inputValue = createContext();
+import { useRef } from "react";
 
 export default function SearchBar() {
   const input = useRef();
@@ -15,7 +13,7 @@ export default function SearchBar() {
         placeholder="Ürün veya Marka Ara..."
         
       />
-      <inputValue.Provider value={input}></inputValue.Provider>
+      
     </>
   );
 }

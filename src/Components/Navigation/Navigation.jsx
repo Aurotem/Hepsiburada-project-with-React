@@ -1,5 +1,4 @@
 import SearchBar from "./SearchBar";
-import ShoppingCart from "../ShoppingCart";
 
 export default function Navigation({ userIsLogged, onLogin }) {
   function handleClick(){

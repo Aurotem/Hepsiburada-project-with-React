@@ -3,7 +3,7 @@ import basket from "../assets/basket";
 export default function ShoppingCart() {
   const [isBasketVisible, setIsBasketVisible] = useState({
     basketOpen: false,
-    item: {},
+    item: {...basket},
   });
 
   function basketVisible() {
@@ -21,28 +21,40 @@ export default function ShoppingCart() {
     }
   }
 
+  function handleIncrease() {
+
+  }
+  function handleDecrease() {
+
+  }
+
   let basketArray = [];
   let totalPrice = 0
   function handleAddToBasket() {
     basketArray = [];
     for (let i of basket) {
-      totalPrice += i.price;
+      totalPrice += i.quantity ? i.quantity * i.price : i.price;
       basketArray.push(
         <li className="flex py-6">
-          <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200"></div>
+          <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200 items-center flex">
+            <img className="h-full w-full" src={i.images[0]} alt="product image" />
+          </div>
           <div className="ml-4 flex flex-1 flex-col">
             <div>
               <div className="flex justify-between text-base font-medium text-gray-900">
                 <h3>
                   <a href="#">{i.title}</a>
                 </h3>
-                <p className="ml-4">${i.price}</p>
+                <p className="ml-4">${i.quantity ? i.quantity * i.price : i.price}</p>
               </div>
-              <p className="mt-1 text-sm text-gray-500">Salmon</p>
+              <p className="mt-1 text-sm text-gray-500">{i.description.slice(0,52) + '...'}</p>
             </div>
             <div className="flex flex-1 items-end justify-between text-sm">
-              <p className="text-gray-500">Qty 1</p>
-
+              <div className="flex">
+                <button onClick={handleIncrease} className="bg-stone-100 rounded-sm h-fit px-3 text-stone-700"> + </button>
+              <p className="text-gray-500">{i.quantity ? 'Adet: '+i.quantity :'Adet: ' + 1}</p>
+                <button onClick={handleDecrease} className="bg-stone-100 rounded-sm h-fit px-3 text-stone-700"> - </button>
+              </div>
               <div className="flex">
                 <button
                   onClick={() => handleRemoveItem(i)}
@@ -62,7 +74,7 @@ export default function ShoppingCart() {
 
   return (
     <>
-      {isBasketVisible.basketOpen && (
+      {!isBasketVisible.basketOpen && (
         <div
           className="relative z-10"
           aria-labelledby="slide-over-title"
@@ -82,7 +94,7 @@ export default function ShoppingCart() {
                           className="text-lg font-medium text-gray-900"
                           id="slide-over-title"
                         >
-                          Shopping cart
+                          Sepet
                         </h2>
                         <div className="ml-3 flex h-7 items-center">
                           <button

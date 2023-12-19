@@ -1,13 +1,10 @@
 "use client";
 
 import { Banner } from "flowbite-react";
-import { HiArrowRight, HiX } from "react-icons/hi";
+import {  HiX } from "react-icons/hi";
 import { MdPercent } from "react-icons/md";
 
 export default function OfferBanner() {
-  function handleRegisterButtonClick() {
-    console.log("Register butonuna tıklandı");
-  }
 
   return (
     <Banner>
@@ -19,13 +16,6 @@ export default function OfferBanner() {
             </span>
             <span className="[&_p]:inline">
               Üye ol ve sepette %5 indirim kazan!&nbsp;
-              <button
-                onClick={handleRegisterButtonClick}
-                className="ml-0 flex items-center text-sm font-medium text-blue-800 hover:underline dark:text-blue-900 md:ml-1 md:inline-flex"
-              >
-                Üye ol
-                <HiArrowRight className="ml-2" />
-              </button>
             </span>
           </p>
         </div>
