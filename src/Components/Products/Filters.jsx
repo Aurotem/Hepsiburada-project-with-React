@@ -1,11 +1,9 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import Products from "./Products";
-import { inputValue } from "../Navigation/SearchBar";
 export default function Filters() {
-    const input = useContext(inputValue)
-    const [filterValue, setFilterValue] = useState();
+  const [filterValue, setFilterValue] = useState();
   function filterProducts(value) {
-    setFilterValue(value)
+    setFilterValue(value);
   }
 
   return (
