@@ -29,7 +29,6 @@ export default function Navigation({ userIsLogged, onLogin }) {
         </button>
         <button className='btn btn-black ml-3'> Sepetim </button>
       </div>
-      <ShoppingCart />
     </nav>
   );
 }

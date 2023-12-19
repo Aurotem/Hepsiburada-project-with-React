@@ -67,12 +67,17 @@ export default function Login({ userIsLogged, userLog }) {
     setIsRegistering(0);
   }
 
+  function handleClosePanel() {
+    userIsLogged({loginOpen: false, isLogged: userLog.isLogged, user: userLog.user });
+  }
+
   let loginPage = (
     <div className="loginPage flex h-fit w-1/3 flex-1 flex-col justify-center px-6 py-12 lg:px-8 fixed bg-white z-20">
-      <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <span className="mx-auto h-10 w-full text-center font-bold text-2xl">
+      <div className="sm:mx-auto sm:w-full sm:max-w-sm flex justify-between">
+        <span className="mx-auto h-10 w-full font-bold text-2xl">
           LOGO
         </span>
+        <button onClick={handleClosePanel} className="font-bold text-2xl">X</button>
       </div>
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
