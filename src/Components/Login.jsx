@@ -36,7 +36,7 @@ export default function Login({ userIsLogged, userLog }) {
     for (let i of localData) {
       if (i.userEMail === userInfo.userEMail) {
         if (i.userPassword === userInfo.userPassword) {
-          userIsLogged({ isLogged: true, user: i });
+          userIsLogged({loginOpen: false, isLogged: true, user: i });
           alert("Giriş yaptın!");
           break;
         } else {
@@ -201,5 +201,5 @@ export default function Login({ userIsLogged, userLog }) {
     </div>
   );
 
-  return (userLog.isLogged == false || userLog.loginOpen) && loginPage;
+  return  userLog.loginOpen && loginPage;
 }

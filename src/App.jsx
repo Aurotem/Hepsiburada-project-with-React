@@ -22,7 +22,7 @@ function App() {
       <Login userIsLogged={logUser} userLog={userLogged}/>
       <div className="bg-stone-300 dark:bg-stone-700">
         {!userLogged.isLogged && <OfferBanner />}
-        <Navigation isLogged={userLogged} onLogin={logUser}/>
+        <Navigation userIsLogged={userLogged} onLogin={logUser}/>
         <Highlights />
         <Filters />
         <ShoppingCart/>
