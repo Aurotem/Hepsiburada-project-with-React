@@ -33,7 +33,6 @@ export default function Login({ userIsLogged, userLog }) {
       userEMail: userEMail.current.value,
       userPassword: userPassword.current.value,
     };
-
     for (let i of localData) {
       if (i.userEMail === userInfo.userEMail) {
         if (i.userPassword === userInfo.userPassword) {
@@ -60,12 +59,12 @@ export default function Login({ userIsLogged, userLog }) {
 
     for (let i of localData) {
       if (i.userEMail === userInfo.userEMail) {
-        i.userPassword = userInfo.userPassword
-        break
+        i.userPassword = userInfo.userPassword;
+        break;
       }
     }
-    localStorage.setItem('users', JSON.stringify(localData))
-    setIsRegistering(0)
+    localStorage.setItem("users", JSON.stringify(localData));
+    setIsRegistering(0);
   }
 
   let loginPage = (
@@ -202,5 +201,5 @@ export default function Login({ userIsLogged, userLog }) {
     </div>
   );
 
-  return userLog.isLogged == false && loginPage;
+  return (userLog.isLogged == false || userLog.loginOpen) && loginPage;
 }

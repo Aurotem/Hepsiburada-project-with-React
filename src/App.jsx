@@ -8,17 +8,21 @@ import Login from "./Components/Login";
 import ShoppingCart from "./Components/ShoppingCart";
 
 function App() {
-  const [userLogged, setUserLogged] = useState({isLogged: false, user: null});
+  const [userLogged, setUserLogged] = useState({loginOpen: false,isLogged: false, user: null});
 
   function logUser(userLogin) {
-    setUserLogged({isLogged: userLogin.isLogged, user: userLogin.user})
+    setUserLogged((prev) => ({
+      loginOpen: userLogin.loginOpen,
+      isLogged: userLogin.isLogged,
+      user: userLogin.user
+    }));
   }
   return (
     <>
       <Login userIsLogged={logUser} userLog={userLogged}/>
       <div className="bg-stone-300 dark:bg-stone-700">
         {!userLogged.isLogged && <OfferBanner />}
-        <Navigation isLogged={userLogged} />
+        <Navigation isLogged={userLogged} onLogin={logUser}/>
         <Highlights />
         <Filters />
         <ShoppingCart/>
