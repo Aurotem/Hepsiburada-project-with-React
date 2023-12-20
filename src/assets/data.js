@@ -11,10 +11,10 @@ let product = [
       "category": "smartphones",
       "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
       "images": [
-          "../../public/i91.jpeg",
-          "../../public/i92.jpeg",
-          "../../public/i93.jpeg",
-          "../../public/i94.jpeg"
+          "../../i91.jpeg",
+          "../../i92.jpeg",
+          "../../i93.jpeg",
+          "../../i94.jpeg"
       ]
   },
   {
@@ -29,9 +29,9 @@ let product = [
       "category": "smartphones",
       "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
       "images": [
-          "../../public/ix1.jpeg",
-          "../../public/ix2.jpeg",
-          "../../public/ix3.jpeg"
+          "../../ix1.jpeg",
+          "../../ix2.jpeg",
+          "../../ix3.jpeg"
       ]
   },
   {
@@ -46,7 +46,7 @@ let product = [
       "category": "smartphones",
       "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
       "images": [
-          "../../public/u91.jpeg"
+          "../../u91.jpeg"
       ]
   },
   {
@@ -61,10 +61,10 @@ let product = [
       "category": "smartphones",
       "thumbnail": "https://i.dummyjson.com/data/products/4/thumbnail.jpg",
       "images": [
-          "../../public/f191.jpeg",
-          "../../public/f192.jpeg",
-          "../../public/f193.jpeg",
-          "../../public/f194.jpeg"
+          "../../f191.jpeg",
+          "../../f192.jpeg",
+          "../../f193.jpeg",
+          "../../f194.jpeg"
       ]
   },
   {
@@ -79,9 +79,9 @@ let product = [
       "category": "smartphones",
       "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
       "images": [
-          "../../public/p301.jpeg",
-          "../../public/p302.jpeg",
-          "../../public/p303.jpeg"
+          "../../p301.jpeg",
+          "../../p302.jpeg",
+          "../../p303.jpeg"
       ]
   },
   {
@@ -96,10 +96,10 @@ let product = [
       "category": "laptops",
       "thumbnail": "https://i.dummyjson.com/data/products/6/thumbnail.png",
       "images": [
-          "../../public/macbook1.png",
-          "../../public/macbook2.jpeg",
-          "../../public/macbook3.png",
-          "../../public/macbook4.jpeg"
+          "../../macbook1.png",
+          "../../macbook2.jpeg",
+          "../../macbook3.png",
+          "../../macbook4.jpeg"
       ]
   },
   {
@@ -114,9 +114,9 @@ let product = [
       "category": "laptops",
       "thumbnail": "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
       "images": [
-          "../../public/sambook1.jpeg",
-          "../../public/sambook2.jpeg",
-          "../../public/sambook3.jpeg"
+          "../../sambook1.jpeg",
+          "../../sambook2.jpeg",
+          "../../sambook3.jpeg"
       ]
   },
   {
@@ -131,10 +131,10 @@ let product = [
       "category": "laptops",
       "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
       "images": [
-          "../../public/surface1.jpeg",
-          "../../public/surface2.jpeg",
-          "../../public/surface3.jpeg",
-          "../../public/surface4.jpeg"
+          "../../surface1.jpeg",
+          "../../surface2.jpeg",
+          "../../surface3.jpeg",
+          "../../surface4.jpeg"
       ]
   },
   {
@@ -149,9 +149,9 @@ let product = [
       "category": "laptops",
       "thumbnail": "https://i.dummyjson.com/data/products/9/thumbnail.jpg",
       "images": [
-          "../../public/infinix1.jpeg",
-          "../../public/infinix2.png",
-          "../../public/infinix3.png"
+          "../../infinix1.jpeg",
+          "../../infinix2.png",
+          "../../infinix3.png"
       ]
   },
   {
@@ -166,9 +166,9 @@ let product = [
       "category": "laptops",
       "thumbnail": "https://i.dummyjson.com/data/products/10/thumbnail.jpeg",
       "images": [
-          "../../public/hp1.jpeg",
-          "../../public/hp2.jpeg",
-          "../../public/hp3.jpeg"
+          "../../hp1.jpeg",
+          "../../hp2.jpeg",
+          "../../hp3.jpeg"
       ]
   },
   {
@@ -183,9 +183,9 @@ let product = [
       "category": "fragrances",
       "thumbnail": "https://i.dummyjson.com/data/products/11/thumbnail.jpg",
       "images": [
-          "../../public/poil1.jpeg",
-          "../../public/poil2.jpeg",
-          "../../public/poil3.jpeg"
+          "../../poil1.jpeg",
+          "../../poil2.jpeg",
+          "../../poil3.jpeg"
       ]
   },
   {
@@ -200,9 +200,9 @@ let product = [
       "category": "fragrances",
       "thumbnail": "https://i.dummyjson.com/data/products/12/thumbnail.jpg",
       "images": [
-          "../../public/royal1.jpeg",
-          "../../public/royal2.jpeg",
-          "../../public/royal3.png"
+          "../../royal1.jpeg",
+          "../../royal2.jpeg",
+          "../../royal3.png"
       ]
   },
   {
@@ -217,10 +217,10 @@ let product = [
       "category": "fragrances",
       "thumbnail": "https://i.dummyjson.com/data/products/13/thumbnail.webp",
       "images": [
-          "../../public/xpressio1.jpeg",
-          "../../public/xpressio2.png",
-          "../../public/xpressio3.jpeg",
-          "../../public/xpressio4.jpeg"
+          "../../xpressio1.jpeg",
+          "../../xpressio2.png",
+          "../../xpressio3.jpeg",
+          "../../xpressio4.jpeg"
       ]
   },
   {
@@ -235,9 +235,9 @@ let product = [
       "category": "fragrances",
       "thumbnail": "https://i.dummyjson.com/data/products/14/thumbnail.jpg",
       "images": [
-          "../../public/poil1.jpeg",
-          "../../public/poil2.jpeg",
-          "../../public/poil3.jpeg"
+          "../../poil1.jpeg",
+          "../../poil2.jpeg",
+          "../../poil3.jpeg"
       ]
   },
   {
@@ -252,9 +252,9 @@ let product = [
       "category": "fragrances",
       "thumbnail": "https://i.dummyjson.com/data/products/15/thumbnail.jpg",
       "images": [
-          "../../public/perfume1.jpeg",
-          "../../public/perfume2.jpeg",
-          "../../public/perfume3.jpeg"
+          "../../perfume1.jpeg",
+          "../../perfume2.jpeg",
+          "../../perfume3.jpeg"
       ]
   },
   {
@@ -269,9 +269,9 @@ let product = [
       "category": "skincare",
       "thumbnail": "https://i.dummyjson.com/data/products/16/thumbnail.jpg",
       "images": [
-          "../../public/serum1.jpeg",
-          "../../public/serum2.jpeg",
-          "../../public/serum3.png"
+          "../../serum1.jpeg",
+          "../../serum2.jpeg",
+          "../../serum3.png"
       ]
   },
   {
@@ -286,9 +286,9 @@ let product = [
       "category": "skincare",
       "thumbnail": "https://i.dummyjson.com/data/products/17/thumbnail.jpg",
       "images": [
-          "../../public/oil1.jpeg",
-          "../../public/oil2.jpeg",
-          "../../public/oil3.jpeg"
+          "../../oil1.jpeg",
+          "../../oil2.jpeg",
+          "../../oil3.jpeg"
       ]
   },
   {
@@ -303,10 +303,10 @@ let product = [
       "category": "skincare",
       "thumbnail": "https://i.dummyjson.com/data/products/18/thumbnail.jpg",
       "images": [
-          "../../public/moist1.jpeg",
-          "../../public/moist2.jpeg",
-          "../../public/moist3.jpeg",
-          "../../public/moist4.jpeg"
+          "../../moist1.jpeg",
+          "../../moist2.jpeg",
+          "../../moist3.jpeg",
+          "../../moist4.jpeg"
       ]
   },
   {
@@ -321,9 +321,9 @@ let product = [
       "category": "skincare",
       "thumbnail": "https://i.dummyjson.com/data/products/19/thumbnail.jpg",
       "images": [
-        "../../public/serum1.jpeg",
-        "../../public/serum2.jpeg",
-        "../../public/serum3.png"
+        "../../serum1.jpeg",
+        "../../serum2.jpeg",
+        "../../serum3.png"
       ]
   },
   {
@@ -338,9 +338,9 @@ let product = [
       "category": "skincare",
       "thumbnail": "https://i.dummyjson.com/data/products/20/thumbnail.jpg",
       "images": [
-          "../../public/cream1.jpeg",
-          "../../public/cream2.jpeg",
-          "../../public/cream3.jpeg"
+          "../../cream1.jpeg",
+          "../../cream2.jpeg",
+          "../../cream3.jpeg"
       ]
   },
   {
@@ -355,9 +355,9 @@ let product = [
       "category": "groceries",
       "thumbnail": "https://i.dummyjson.com/data/products/21/thumbnail.png",
       "images": [
-          "../../public/masoor1.png",
-          "../../public/masoor2.jpeg",
-          "../../public/masoor3.jpeg"
+          "../../masoor1.png",
+          "../../masoor2.jpeg",
+          "../../masoor3.jpeg"
       ]
   },
   {
@@ -372,9 +372,9 @@ let product = [
       "category": "groceries",
       "thumbnail": "https://i.dummyjson.com/data/products/22/thumbnail.jpg",
       "images": [
-          "../../public/macaroni1.jpeg",
-          "../../public/macaroni2.jpeg",
-          "../../public/macaroni3.jpeg"
+          "../../macaroni1.jpeg",
+          "../../macaroni2.jpeg",
+          "../../macaroni3.jpeg"
       ]
   },
   {
@@ -389,9 +389,9 @@ let product = [
       "category": "groceries",
       "thumbnail": "https://i.dummyjson.com/data/products/23/thumbnail.jpg",
       "images": [
-          "../../public/essence1.jpeg",
-          "../../public/essence2.jpeg",
-          "../../public/essence3.jpeg"
+          "../../essence1.jpeg",
+          "../../essence2.jpeg",
+          "../../essence3.jpeg"
       ]
   },
   {
@@ -406,10 +406,10 @@ let product = [
       "category": "groceries",
       "thumbnail": "https://i.dummyjson.com/data/products/24/thumbnail.jpg",
       "images": [
-          "../../public/cereal1.jpeg",
-          "../../public/cereal2.jpeg",
-          "../../public/cereal3.jpeg",
-          "../../public/cereal4.jpeg",
+          "../../cereal1.jpeg",
+          "../../cereal2.jpeg",
+          "../../cereal3.jpeg",
+          "../../cereal4.jpeg",
       ]
   },
   {
@@ -424,9 +424,9 @@ let product = [
       "category": "groceries",
       "thumbnail": "https://i.dummyjson.com/data/products/25/thumbnail.jpg",
       "images": [
-          "../../public/gulab1.png",
-          "../../public/gulab2.jpeg",
-          "../../public/gulab3.png"
+          "../../gulab1.png",
+          "../../gulab2.jpeg",
+          "../../gulab3.png"
       ]
   },
   {
@@ -441,11 +441,11 @@ let product = [
       "category": "home-decoration",
       "thumbnail": "https://i.dummyjson.com/data/products/26/thumbnail.jpg",
       "images": [
-          "../../public/phanger1.jpeg",
-          "../../public/phanger2.jpeg",
-          "../../public/phanger3.jpeg",
-          "../../public/phanger4.jpeg",
-          "../../public/phanger5.jpeg"
+          "../../phanger1.jpeg",
+          "../../phanger2.jpeg",
+          "../../phanger3.jpeg",
+          "../../phanger4.jpeg",
+          "../../phanger5.jpeg"
       ]
   },
   {
@@ -460,9 +460,9 @@ let product = [
       "category": "home-decoration",
       "thumbnail": "https://i.dummyjson.com/data/products/27/thumbnail.webp",
       "images": [
-          "../../public/wbird1.jpeg",
-          "../../public/wbird2.jpeg",
-          "../../public/wbird3.jpeg"
+          "../../wbird1.jpeg",
+          "../../wbird2.jpeg",
+          "../../wbird3.jpeg"
       ]
   },
   {
@@ -477,10 +477,10 @@ let product = [
       "category": "home-decoration",
       "thumbnail": "https://i.dummyjson.com/data/products/28/thumbnail.jpg",
       "images": [
-          "../../public/artlamb1.jpeg",
-          "../../public/artlamb2.jpeg",
-          "../../public/artlamb3.jpeg",
-          "../../public/artlamb4.jpeg"
+          "../../artlamb1.jpeg",
+          "../../artlamb2.jpeg",
+          "../../artlamb3.jpeg",
+          "../../artlamb4.jpeg"
       ]
   },
   {
@@ -495,9 +495,9 @@ let product = [
       "category": "home-decoration",
       "thumbnail": "https://i.dummyjson.com/data/products/29/thumbnail.webp",
       "images": [
-          "../../public/chinese1.jpeg",
-          "../../public/chinese2.jpeg",
-          "../../public/chinese3.webp"
+          "../../chinese1.jpeg",
+          "../../chinese2.jpeg",
+          "../../chinese3.webp"
       ]
   },
   {
@@ -512,9 +512,9 @@ let product = [
       "category": "home-decoration",
       "thumbnail": "https://i.dummyjson.com/data/products/30/thumbnail.jpg",
       "images": [
-          "../../public/keyholder1.jpeg",
-          "../../public/keyholder2.jpeg",
-          "../../public/keyholder3.jpeg"
+          "../../keyholder1.jpeg",
+          "../../keyholder2.jpeg",
+          "../../keyholder3.jpeg"
       ]
   }
 ];
