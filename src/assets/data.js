@@ -235,10 +235,9 @@ let product = [
       "category": "fragrances",
       "thumbnail": "https://i.dummyjson.com/data/products/14/thumbnail.jpg",
       "images": [
-          "https://i.dummyjson.com/data/products/14/1.jpg",
-          "https://i.dummyjson.com/data/products/14/2.jpg",
-          "https://i.dummyjson.com/data/products/14/3.jpg",
-          "https://i.dummyjson.com/data/products/14/thumbnail.jpg"
+          "../../public/poil1.jpeg",
+          "../../public/poil2.jpeg",
+          "../../public/poil3.jpeg",
       ]
   },
   {
@@ -253,11 +252,9 @@ let product = [
       "category": "fragrances",
       "thumbnail": "https://i.dummyjson.com/data/products/15/thumbnail.jpg",
       "images": [
-          "https://i.dummyjson.com/data/products/15/1.jpg",
-          "https://i.dummyjson.com/data/products/15/2.jpg",
-          "https://i.dummyjson.com/data/products/15/3.jpg",
-          "https://i.dummyjson.com/data/products/15/4.jpg",
-          "https://i.dummyjson.com/data/products/15/thumbnail.jpg"
+          "../../public/perfume1.jpeg",
+          "../../public/perfume2.jpeg",
+          "../../public/perfume3.jpeg",
       ]
   },
   {
@@ -272,11 +269,9 @@ let product = [
       "category": "skincare",
       "thumbnail": "https://i.dummyjson.com/data/products/16/thumbnail.jpg",
       "images": [
-          "https://i.dummyjson.com/data/products/16/1.png",
-          "https://i.dummyjson.com/data/products/16/2.webp",
-          "https://i.dummyjson.com/data/products/16/3.jpg",
-          "https://i.dummyjson.com/data/products/16/4.jpg",
-          "https://i.dummyjson.com/data/products/16/thumbnail.jpg"
+          "../../public/serum1.jpeg",
+          "../../public/serum2.jpeg",
+          "../../public/serum3.png",
       ]
   },
   {
@@ -291,10 +286,9 @@ let product = [
       "category": "skincare",
       "thumbnail": "https://i.dummyjson.com/data/products/17/thumbnail.jpg",
       "images": [
-          "https://i.dummyjson.com/data/products/17/1.jpg",
-          "https://i.dummyjson.com/data/products/17/2.jpg",
-          "https://i.dummyjson.com/data/products/17/3.jpg",
-          "https://i.dummyjson.com/data/products/17/thumbnail.jpg"
+          "../../public/oil1.jpeg",
+          "../../public/oil2.jpeg",
+          "../../public/oil3.jpeg",
       ]
   },
   {
@@ -309,11 +303,10 @@ let product = [
       "category": "skincare",
       "thumbnail": "https://i.dummyjson.com/data/products/18/thumbnail.jpg",
       "images": [
-          "https://i.dummyjson.com/data/products/18/1.jpg",
-          "https://i.dummyjson.com/data/products/18/2.jpg",
-          "https://i.dummyjson.com/data/products/18/3.jpg",
-          "https://i.dummyjson.com/data/products/18/4.jpg",
-          "https://i.dummyjson.com/data/products/18/thumbnail.jpg"
+          "../../public/moist1.jpeg",
+          "../../public/moist2.jpeg",
+          "../../public/moist3.jpeg",
+          "../../public/moist4.jpeg",
       ]
   },
   {
@@ -328,10 +321,9 @@ let product = [
       "category": "skincare",
       "thumbnail": "https://i.dummyjson.com/data/products/19/thumbnail.jpg",
       "images": [
-          "https://i.dummyjson.com/data/products/19/1.jpg",
-          "https://i.dummyjson.com/data/products/19/2.jpg",
-          "https://i.dummyjson.com/data/products/19/3.png",
-          "https://i.dummyjson.com/data/products/19/thumbnail.jpg"
+        "../../public/serum1.jpeg",
+        "../../public/serum2.jpeg",
+        "../../public/serum3.png",
       ]
   },
   {
@@ -346,11 +338,9 @@ let product = [
       "category": "skincare",
       "thumbnail": "https://i.dummyjson.com/data/products/20/thumbnail.jpg",
       "images": [
-          "https://i.dummyjson.com/data/products/20/1.jpg",
-          "https://i.dummyjson.com/data/products/20/2.jpg",
-          "https://i.dummyjson.com/data/products/20/3.jpg",
-          "https://i.dummyjson.com/data/products/20/4.jpg",
-          "https://i.dummyjson.com/data/products/20/thumbnail.jpg"
+          "../../public/cream1.jpeg",
+          "../../public/cream2.jpeg",
+          "../../public/cream3.jpeg"
       ]
   },
   {
@@ -365,9 +355,9 @@ let product = [
       "category": "groceries",
       "thumbnail": "https://i.dummyjson.com/data/products/21/thumbnail.png",
       "images": [
-          "https://i.dummyjson.com/data/products/21/1.png",
-          "https://i.dummyjson.com/data/products/21/2.jpg",
-          "https://i.dummyjson.com/data/products/21/3.jpg"
+          "../../public/masoor1.png",
+          "../../public/masoor2.jpeg",
+          "../../public/masoor3.jpeg"
       ]
   },
   {
@@ -382,9 +372,9 @@ let product = [
       "category": "groceries",
       "thumbnail": "https://i.dummyjson.com/data/products/22/thumbnail.jpg",
       "images": [
-          "https://i.dummyjson.com/data/products/22/1.jpg",
-          "https://i.dummyjson.com/data/products/22/2.jpg",
-          "https://i.dummyjson.com/data/products/22/3.jpg"
+          "../../public/macaroni1.jpeg",
+          "../../public/macaroni2.jpeg",
+          "../../public/macaroni3.jpeg"
       ]
   },
   {
@@ -399,11 +389,9 @@ let product = [
       "category": "groceries",
       "thumbnail": "https://i.dummyjson.com/data/products/23/thumbnail.jpg",
       "images": [
-          "https://i.dummyjson.com/data/products/23/1.jpg",
-          "https://i.dummyjson.com/data/products/23/2.jpg",
-          "https://i.dummyjson.com/data/products/23/3.jpg",
-          "https://i.dummyjson.com/data/products/23/4.jpg",
-          "https://i.dummyjson.com/data/products/23/thumbnail.jpg"
+          "../../public/essence1.jpeg",
+          "../../public/essence2.jpeg",
+          "../../public/essence3.jpeg"
       ]
   },
   {
@@ -418,11 +406,10 @@ let product = [
       "category": "groceries",
       "thumbnail": "https://i.dummyjson.com/data/products/24/thumbnail.jpg",
       "images": [
-          "https://i.dummyjson.com/data/products/24/1.jpg",
-          "https://i.dummyjson.com/data/products/24/2.jpg",
-          "https://i.dummyjson.com/data/products/24/3.jpg",
-          "https://i.dummyjson.com/data/products/24/4.jpg",
-          "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
+          "../../public/cereal1.jpeg",
+          "../../public/cereal2.jpeg",
+          "../../public/cereal3.jpeg",
+          "../../public/cereal4.jpeg",
       ]
   },
   {
@@ -437,11 +424,9 @@ let product = [
       "category": "groceries",
       "thumbnail": "https://i.dummyjson.com/data/products/25/thumbnail.jpg",
       "images": [
-          "https://i.dummyjson.com/data/products/25/1.png",
-          "https://i.dummyjson.com/data/products/25/2.jpg",
-          "https://i.dummyjson.com/data/products/25/3.png",
-          "https://i.dummyjson.com/data/products/25/4.jpg",
-          "https://i.dummyjson.com/data/products/25/thumbnail.jpg"
+          "../../public/gulab1.png",
+          "../../public/gulab2.jpeg",
+          "../../public/gulab3.png",
       ]
   },
   {
@@ -456,12 +441,11 @@ let product = [
       "category": "home-decoration",
       "thumbnail": "https://i.dummyjson.com/data/products/26/thumbnail.jpg",
       "images": [
-          "https://i.dummyjson.com/data/products/26/1.jpg",
-          "https://i.dummyjson.com/data/products/26/2.jpg",
-          "https://i.dummyjson.com/data/products/26/3.jpg",
-          "https://i.dummyjson.com/data/products/26/4.jpg",
-          "https://i.dummyjson.com/data/products/26/5.jpg",
-          "https://i.dummyjson.com/data/products/26/thumbnail.jpg"
+          "../../public/phanger1.jpeg",
+          "../../public/phanger2.jpeg",
+          "../../public/phanger3.jpeg",
+          "../../public/phanger4.jpeg",
+          "../../public/phanger5.jpeg",
       ]
   },
   {
@@ -476,11 +460,9 @@ let product = [
       "category": "home-decoration",
       "thumbnail": "https://i.dummyjson.com/data/products/27/thumbnail.webp",
       "images": [
-          "https://i.dummyjson.com/data/products/27/1.jpg",
-          "https://i.dummyjson.com/data/products/27/2.jpg",
-          "https://i.dummyjson.com/data/products/27/3.jpg",
-          "https://i.dummyjson.com/data/products/27/4.jpg",
-          "https://i.dummyjson.com/data/products/27/thumbnail.webp"
+          "../../public/wbird1.jpeg",
+          "../../public/wbird2.jpeg",
+          "../../public/wbird3.jpeg"
       ]
   },
   {
@@ -495,11 +477,10 @@ let product = [
       "category": "home-decoration",
       "thumbnail": "https://i.dummyjson.com/data/products/28/thumbnail.jpg",
       "images": [
-          "https://i.dummyjson.com/data/products/28/1.jpg",
-          "https://i.dummyjson.com/data/products/28/2.jpg",
-          "https://i.dummyjson.com/data/products/28/3.png",
-          "https://i.dummyjson.com/data/products/28/4.jpg",
-          "https://i.dummyjson.com/data/products/28/thumbnail.jpg"
+          "../../public/artlamb1.jpeg",
+          "../../public/artlamb2.jpeg",
+          "../../public/artlamb3.jpeg",
+          "../../public/artlamb4.jpeg",
       ]
   },
   {
@@ -514,11 +495,9 @@ let product = [
       "category": "home-decoration",
       "thumbnail": "https://i.dummyjson.com/data/products/29/thumbnail.webp",
       "images": [
-          "https://i.dummyjson.com/data/products/29/1.jpg",
-          "https://i.dummyjson.com/data/products/29/2.jpg",
-          "https://i.dummyjson.com/data/products/29/3.webp",
-          "https://i.dummyjson.com/data/products/29/4.webp",
-          "https://i.dummyjson.com/data/products/29/thumbnail.webp"
+          "../../public/chinese1.jpeg",
+          "../../public/chinese2.jpeg",
+          "../../public/chinese3.webp"
       ]
   },
   {
@@ -533,10 +512,9 @@ let product = [
       "category": "home-decoration",
       "thumbnail": "https://i.dummyjson.com/data/products/30/thumbnail.jpg",
       "images": [
-          "https://i.dummyjson.com/data/products/30/1.jpg",
-          "https://i.dummyjson.com/data/products/30/2.jpg",
-          "https://i.dummyjson.com/data/products/30/3.jpg",
-          "https://i.dummyjson.com/data/products/30/thumbnail.jpg"
+          "../../public/keyholder1.jpeg",
+          "../../public/keyholder2.jpeg",
+          "../../public/keyholder3.jpeg"
       ]
   }
 ]
