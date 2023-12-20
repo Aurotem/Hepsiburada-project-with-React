@@ -1,29 +1,32 @@
+import { useState } from "react";
+
 import ProductImages from "./ProductImages";
 import Star from "./Star";
 import basket from "../../assets/basket";
 
 export default function Product({ product, setBasketValues, basketValues }) {
+  const [isOpened, setIsOpened] = useState(false);
   function handleAddToBasket(i) {
-    for(let a in basketValues.items){
-      if(i.title == basketValues.items[a].title){
-        let newItems = basketValues.items
+    for (let a in basketValues.items) {
+      if (i.title == basketValues.items[a].title) {
+        let newItems = basketValues.items;
         let obj = {
           ...newItems[a],
-          quantity: newItems[a].quantity ? newItems[a].quantity += 1 : 2
-        }
-        newItems[a] = obj
+          quantity: newItems[a].quantity ? (newItems[a].quantity += 1) : 2,
+        };
+        newItems[a] = obj;
         setBasketValues((prev) => ({
           ...prev,
-          items: newItems
-        }))
-        return 1
+          items: newItems,
+        }));
+        return 1;
       }
     }
     setBasketValues((prev) => ({
       ...prev,
-      items: [...prev.items, i]
-    }))
-    basket.push(i)
+      items: [...prev.items, i],
+    }));
+    basket.push(i);
   }
 
   function calcStars(rate) {
@@ -40,14 +43,18 @@ export default function Product({ product, setBasketValues, basketValues }) {
     return arr;
   }
 
-  return (
+  function detailsPage() {
+    setIsOpened((prev) => !prev);
+  }
+
+  return !isOpened ? (
     <div className="w-72 max-w-sm bg-white border border-stone-200 rounded-lg shadow dark:bg-stone-800 dark:border-stone-700 mx-3 my-3 pb-2">
       <div className="h-44 sm:h-52 xl:h-44 2xl:h-44 py-2 px-2">
         <ProductImages images={product.images} />
       </div>
 
       <div className="px-5 pb-1">
-        <a href="#">
+        <button className="text-left" onClick={detailsPage}>
           <h5 className="text-xl tracking-tight text-gray-900 dark:text-white mb-2">
             {product.brand}
           </h5>
@@ -55,13 +62,12 @@ export default function Product({ product, setBasketValues, basketValues }) {
             {product.title}
           </h5>
           <p className="text-md tracking-tight text-gray-800 dark:text-stone-200">
-            {product.description.slice(0,41) + '...'}
+            {product.description.slice(0, 41) + "..."}
           </p>
-        </a>
+        </button>
         <div className="flex items-center mt-5 mb-2.5">
           <div className="flex items-center space-x-1 rtl:space-x-reverse">
             {calcStars(Math.round(product.rating))}
-            
           </div>
           <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">
             {Math.round(product.rating)}
@@ -77,11 +83,69 @@ export default function Product({ product, setBasketValues, basketValues }) {
             </span>
           </div>
           <button
-          onClick={() => handleAddToBasket(product)}
+            onClick={() => handleAddToBasket(product)}
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-full"
           >
             Add to cart
           </button>
+        </div>
+      </div>
+      <span className="bg-stone-100 text-stone-800 text-xs font-semibold px-1.5 py-0.5 rounded dark:bg-stone-200 dark:text-stone-800 ms-4">
+        {product.category}
+      </span>
+      <span className="bg-orange-100 text-orange-800 text-xs px-1.5 py-0.5 rounded dark:bg-orange-200 dark:text-orange-800 ml-4">
+        {"Stock: " + product.stock}
+      </span>
+    </div>
+  ) : (
+    <div className="fixed bg-white border border-stone-200 rounded-lg shadow dark:bg-stone-800 dark:border-stone-700 left-1/2 top-1/2 detail">
+      <button
+        className="absolute text-stone-800 dark:text-stone-50 right-0 font-bold text-xl mx-4 my-2"
+        onClick={detailsPage}
+      >
+        X
+      </button>
+      <div className="flex">
+        <div className="w-56 h-72 sm:h-52 xl:h-44 2xl:h-44 py-2 px-2">
+          <ProductImages images={product.images} />
+        </div>
+
+        <div className="px-5 pb-1">
+          <button className="text-left" onClick={() => detailsPage(product)}>
+            <h5 className="text-xl tracking-tight text-gray-900 dark:text-white mb-2">
+              {product.brand}
+            </h5>
+            <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+              {product.title}
+            </h5>
+            <p className="text-md tracking-tight text-gray-800 dark:text-stone-200">
+              {product.description}
+            </p>
+          </button>
+          <div className="flex items-center mt-5 mb-2.5">
+            <div className="flex items-center space-x-1 rtl:space-x-reverse">
+              {calcStars(Math.round(product.rating))}
+            </div>
+            <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">
+              {Math.round(product.rating)}
+            </span>
+          </div>
+          <div className="flex items-center justify-start flex-col">
+            <div className="flex w-full mb-2 items-center">
+              <span className="text-3xl font-bold text-gray-900 dark:text-white">
+                ${product.price}
+              </span>
+              <span className="bg-green-100 text-green-800 text-xs font-semibold px-1.5 py-0.5 rounded dark:bg-green-200 dark:text-green-800 text-center w-1/2 h-fit ml-auto">
+                {product.discountPercentage + "% Discount!"}
+              </span>
+            </div>
+            <button
+              onClick={() => handleAddToBasket(product)}
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-full"
+            >
+              Add to cart
+            </button>
+          </div>
         </div>
       </div>
       <span className="bg-stone-100 text-stone-800 text-xs font-semibold px-1.5 py-0.5 rounded dark:bg-stone-200 dark:text-stone-800 ms-4">

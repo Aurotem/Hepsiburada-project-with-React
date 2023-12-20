@@ -14,6 +14,7 @@ function App() {
     basketOpen: false,
     items: []
   });
+  
 
   function handleBasketValues(a) {
   setBasketValues(a)
