@@ -74,7 +74,7 @@ export default function ShoppingCart() {
 
   return (
     <>
-      {!isBasketVisible.basketOpen && (
+      {isBasketVisible.basketOpen && (
         <div
           className="relative z-10"
           aria-labelledby="slide-over-title"

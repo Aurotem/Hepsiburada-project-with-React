@@ -2,6 +2,7 @@ import Product from "./Product";
 import product from "../../assets/data";
 
 export default function Products({ parameter = "" }) {
+  console.log(product)
   function productGenerator(productArr, parameter) {
     let arr = [];
     productArr.forEach((e, i) => {
