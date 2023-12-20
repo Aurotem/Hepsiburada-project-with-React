@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Products from "./Products";
-export default function Filters( { setBasketValues, basketValues }) {
+export default function Filters({ setBasketValues, basketValues }) {
   const [filterValue, setFilterValue] = useState();
   function filterProducts(value) {
     setFilterValue(value);
@@ -8,9 +8,9 @@ export default function Filters( { setBasketValues, basketValues }) {
 
   return (
     <>
-      <nav id="product-filters" className=" flex justify-center my-8 h-12 ">
-        <ul className="flex justify-around w-1/2 md:w-3/4 sm:w-full">
-        <li>
+      <nav id="product-filters" className=" flex justify-center my-8 h-fit ">
+        <ul className="flex flex-wrap justify-around w-1/2 md:w-3/4 sm:w-full">
+          <li>
             <button
               onClick={(e) => filterProducts(e.target.value)}
               value=""
@@ -81,7 +81,11 @@ export default function Filters( { setBasketValues, basketValues }) {
           </li>
         </ul>
       </nav>
-      <Products parameter={filterValue} setBasketValues={setBasketValues} basketValues={basketValues}/>
+      <Products
+        parameter={filterValue}
+        setBasketValues={setBasketValues}
+        basketValues={basketValues}
+      />
     </>
   );
 }

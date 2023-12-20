@@ -4,7 +4,12 @@ import ProductImages from "./ProductImages";
 import Star from "./Star";
 import basket from "../../assets/basket";
 
-export default function Product({ product, setBasketValues, basketValues, height }) {
+export default function Product({
+  product,
+  setBasketValues,
+  basketValues,
+  height,
+}) {
   const [isOpened, setIsOpened] = useState(false);
   function handleAddToBasket(i) {
     for (let a in basketValues.items) {
@@ -98,62 +103,65 @@ export default function Product({ product, setBasketValues, basketValues, height
       </span>
     </div>
   ) : (
-    <div className="fixed bg-white border border-stone-200 rounded-lg shadow dark:bg-stone-800 dark:border-stone-700 left-1/2 top-1/2 detail">
-      <button
-        className="absolute text-stone-800 dark:text-stone-50 right-0 font-bold text-xl mx-4 my-2"
-        onClick={detailsPage}
-      >
-        X
-      </button>
-      <div className="flex h-5/6 items-center justify-center">
-        <div className="w-2/3 h-2/3 sm:h-2/3 xl:h-2/3 2xl:h-2/3 py-2 px-2">
-          <ProductImages height='h-96' images={product.images} />
-        </div>
+    <>
+      <div className="h-screen w-screen fixed backdrop-blur z-40 left-0 top-0"></div>
+      <div className="fixed bg-white border border-stone-200 rounded-lg shadow dark:bg-stone-800 dark:border-stone-700 left-1/2 top-1/2 detail">
+        <button
+          className="absolute text-stone-800 dark:text-stone-50 right-0 font-bold text-xl mx-4 my-2"
+          onClick={detailsPage}
+        >
+          X
+        </button>
+        <div className="flex flex-col md:flex-row h-fit md:h-5/6 items-center">
+          <div className="w-full h-1/3 md:h-2/3 md:w-2/3 py-2 px-2 mt-8">
+            <ProductImages height="h-52 md:h-96" images={product.images} />
+          </div>
 
-        <div className="px-5 pb-1 h-1/2">
-          <button className="text-left" onClick={detailsPage}>
-            <h5 className="text-xl tracking-tight text-gray-900 dark:text-white mb-2">
-              {product.brand}
-            </h5>
-            <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-              {product.title}
-            </h5>
-            <p className="text-md tracking-tight text-gray-800 dark:text-stone-200">
-              {product.description}
-            </p>
-          </button>
-          <div className="flex items-center mt-5 mb-2.5 h-1/2">
-            <div className="flex items-center space-x-1 rtl:space-x-reverse">
-              {calcStars(Math.round(product.rating))}
-            </div>
-            <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">
-              {Math.round(product.rating)}
-            </span>
-          </div>
-          <div className="flex items-center justify-start flex-col">
-            <div className="flex w-full mb-2 items-center">
-              <span className="text-3xl font-bold text-gray-900 dark:text-white">
-                ${product.price}
-              </span>
-              <span className="bg-green-100 text-green-800 text-xs font-semibold px-1.5 py-0.5 rounded dark:bg-green-200 dark:text-green-800 text-center w-36 h-fit ml-auto">
-                {product.discountPercentage + "% Discount!"}
-              </span>
-            </div>
-            <button
-              onClick={() => handleAddToBasket(product)}
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-full bottom-0"
-            >
-              Add to cart
+          <div className="px-5 pb-1 h-1/3 md:h-1/2">
+            <button className="text-left" onClick={detailsPage}>
+              <h5 className="text-xl tracking-tight text-gray-900 dark:text-white mb-2">
+                {product.brand}
+              </h5>
+              <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                {product.title}
+              </h5>
+              <p className="text-md tracking-tight text-gray-800 dark:text-stone-200">
+                {product.description}
+              </p>
             </button>
+            <div className="flex items-center mt-5 mb-2.5 h-1/3">
+              <div className="flex items-center space-x-1 rtl:space-x-reverse">
+                {calcStars(Math.round(product.rating))}
+              </div>
+              <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">
+                {Math.round(product.rating)}
+              </span>
+            </div>
+            <div className="flex items-center justify-start flex-col">
+              <div className="flex w-full mb-2 items-center">
+                <span className="text-3xl font-bold text-gray-900 dark:text-white">
+                  ${product.price}
+                </span>
+                <span className="bg-green-100 text-green-800 text-xs font-semibold px-1.5 py-0.5 rounded dark:bg-green-200 dark:text-green-800 text-center w-36 h-fit ml-auto">
+                  {product.discountPercentage + "% Discount!"}
+                </span>
+              </div>
+              <button
+                onClick={() => handleAddToBasket(product)}
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-full bottom-0"
+              >
+                Add to cart
+              </button>
+            </div>
           </div>
         </div>
+        <span className="bg-stone-100 text-stone-800 text-xs font-semibold px-1.5 py-0.5 rounded dark:bg-stone-200 dark:text-stone-800 ms-4">
+          {product.category}
+        </span>
+        <span className="bg-orange-100 text-orange-800 text-xs px-1.5 py-0.5 rounded dark:bg-orange-200 dark:text-orange-800 ml-4">
+          {"Stock: " + product.stock}
+        </span>
       </div>
-      <span className="bg-stone-100 text-stone-800 text-xs font-semibold px-1.5 py-0.5 rounded dark:bg-stone-200 dark:text-stone-800 ms-4">
-        {product.category}
-      </span>
-      <span className="bg-orange-100 text-orange-800 text-xs px-1.5 py-0.5 rounded dark:bg-orange-200 dark:text-orange-800 ml-4">
-        {"Stock: " + product.stock}
-      </span>
-    </div>
+    </>
   );
 }

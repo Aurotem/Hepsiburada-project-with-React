@@ -71,8 +71,9 @@ export default function Login({ userIsLogged, userLog }) {
     userIsLogged({loginOpen: false, isLogged: userLog.isLogged, user: userLog.user });
   }
 
-  let loginPage = (
-    <div className="loginPage flex h-fit w-1/3 flex-1 flex-col justify-center px-6 py-12 lg:px-8 fixed bg-white z-20">
+  let loginPage = (<>
+  <div className="h-screen w-screen fixed backdrop-blur z-40 left-0 top-0"></div>
+    <div className="loginPage flex h-fit w-full sm:w-2/4 flex-1 flex-col justify-center px-6 py-12 lg:px-8 fixed bg-white z-50">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm flex justify-between">
         <span className="mx-auto h-10 w-full font-bold text-2xl">
           LOGO
@@ -204,6 +205,7 @@ export default function Login({ userIsLogged, userLog }) {
         </p>
       </div>
     </div>
+    </>
   );
 
   return  userLog.loginOpen && loginPage;
