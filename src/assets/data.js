@@ -479,7 +479,7 @@ let product = [
       "images": [
           "../../artlamb1.jpeg",
           "../../artlamb2.jpeg",
-          "../../artlamb3.jpeg",
+          "../../artlamb3.png",
           "../../artlamb4.jpeg"
       ]
   },
