@@ -2,18 +2,27 @@ import ProductImages from "./ProductImages";
 import Star from "./Star";
 import basket from "../../assets/basket";
 
-export default function Product({ product }) {
+export default function Product({ product, setBasketValues, basketValues }) {
   function handleAddToBasket(i) {
-    for(let a in basket){
-      if(i.title == basket[a].title){
+    for(let a in basketValues.items){
+      if(i.title == basketValues.items[a].title){
+        let newItems = basketValues.items
         let obj = {
-          ...basket[a],
-          quantity: basket[a].quantity ? basket[a].quantity += 1 : 2
+          ...newItems[a],
+          quantity: newItems[a].quantity ? newItems[a].quantity += 1 : 2
         }
-        basket[a] = obj
+        newItems[a] = obj
+        setBasketValues((prev) => ({
+          ...prev,
+          items: newItems
+        }))
         return 1
       }
     }
+    setBasketValues((prev) => ({
+      ...prev,
+      items: [...prev.items, i]
+    }))
     basket.push(i)
   }
 

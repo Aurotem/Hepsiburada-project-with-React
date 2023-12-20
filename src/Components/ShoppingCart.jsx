@@ -1,43 +1,73 @@
-import { useState } from "react";
-import basket from "../assets/basket";
-export default function ShoppingCart() {
-  const [isBasketVisible, setIsBasketVisible] = useState({
-    basketOpen: false,
-    item: {...basket},
-  });
-
+export default function ShoppingCart({
+  setBasketValues,
+  basketValues,
+  userLogged,
+}) {
   function basketVisible() {
-    setIsBasketVisible((prev) => ({
+    setBasketValues((prev) => ({
       ...prev,
       basketOpen: !prev.basketOpen,
     }));
   }
 
   function handleRemoveItem(i) {
-    for (let a in basket) {
-      if (basket[a].title === i.title) {
-        basket.splice(a, 1);
+    for (let a in basketValues.items) {
+      if (basketValues.items[a].title === i.title) {
+        let newItems = basketValues.items;
+        newItems.splice(a, 1);
+        setBasketValues((prev) => ({
+          ...prev,
+          items: newItems,
+        }));
       }
     }
   }
 
-  function handleIncrease() {
-
+  function handleIncrease(i) {
+    for (let a in basketValues.items) {
+      if (basketValues.items[a].title === i.title) {
+        let newItems = basketValues.items;
+        newItems[a].quantity
+          ? (newItems[a].quantity += 1)
+          : (newItems[a] = {
+              ...newItems[a],
+              quantity: 2,
+            });
+        setBasketValues((prev) => ({
+          ...prev,
+          items: newItems,
+        }));
+      }
+    }
   }
-  function handleDecrease() {
-
+  function handleDecrease(i) {
+    for (let a in basketValues.items) {
+      if (basketValues.items[a].title === i.title) {
+        let newItems = basketValues.items;
+        newItems[a].quantity
+          ? (newItems[a].quantity -= 1)
+          : newItems.slice(a, 1);
+        setBasketValues((prev) => ({
+          ...prev,
+          items: newItems,
+        }));
+      }
+    }
   }
-
   let basketArray = [];
-  let totalPrice = 0
+  let totalPrice = 0;
   function handleAddToBasket() {
     basketArray = [];
-    for (let i of basket) {
+    for (let i of basketValues.items) {
       totalPrice += i.quantity ? i.quantity * i.price : i.price;
       basketArray.push(
-        <li className="flex py-6">
+        <li key={i.id} className="flex py-6">
           <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200 items-center flex">
-            <img className="h-full w-full" src={i.images[0]} alt="product image" />
+            <img
+              className="h-full w-full"
+              src={i.images[0]}
+              alt="product image"
+            />
           </div>
           <div className="ml-4 flex flex-1 flex-col">
             <div>
@@ -45,15 +75,33 @@ export default function ShoppingCart() {
                 <h3>
                   <a href="#">{i.title}</a>
                 </h3>
-                <p className="ml-4">${i.quantity ? i.quantity * i.price : i.price}</p>
+                <p className="ml-4">
+                  ${i.quantity ? i.quantity * i.price : i.price}
+                </p>
               </div>
-              <p className="mt-1 text-sm text-gray-500">{i.description.slice(0,52) + '...'}</p>
+              <p className="mt-1 text-sm text-gray-500">
+                {i.description.slice(0, 52) + "..."}
+              </p>
             </div>
             <div className="flex flex-1 items-end justify-between text-sm">
               <div className="flex">
-                <button onClick={handleIncrease} className="bg-stone-100 rounded-sm h-fit px-3 text-stone-700"> + </button>
-              <p className="text-gray-500">{i.quantity ? 'Adet: '+i.quantity :'Adet: ' + 1}</p>
-                <button onClick={handleDecrease} className="bg-stone-100 rounded-sm h-fit px-3 text-stone-700"> - </button>
+                <button
+                  onClick={() => handleIncrease(i)}
+                  className="bg-stone-100 rounded-sm h-fit px-3 text-stone-700 mr-1"
+                >
+                  {" "}
+                  +{" "}
+                </button>
+                <p className="text-gray-500">
+                  {i.quantity ? "Adet: " + i.quantity : "Adet: " + 1}
+                </p>
+                <button
+                  onClick={() => handleDecrease(i)}
+                  className="bg-stone-100 rounded-sm h-fit px-3 text-stone-700 ml-1"
+                >
+                  {" "}
+                  -{" "}
+                </button>
               </div>
               <div className="flex">
                 <button
@@ -74,7 +122,7 @@ export default function ShoppingCart() {
 
   return (
     <>
-      {isBasketVisible.basketOpen && (
+      {basketValues.basketOpen && (
         <div
           className="relative z-10"
           aria-labelledby="slide-over-title"
@@ -136,8 +184,17 @@ export default function ShoppingCart() {
 
                     <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                       <div className="flex justify-between text-base font-medium text-gray-900">
-                        <p>Toplam:</p>
-                        <p>${totalPrice}</p>
+                        <p>
+                          {userLogged.isLogged
+                            ? "Toplam (Giriş indirimi uygulanmış):"
+                            : "Toplam:"}
+                        </p>
+                        <p>
+                          $
+                          {userLogged.isLogged
+                            ? totalPrice - (totalPrice * 5) / 100
+                            : totalPrice}
+                        </p>
                       </div>
                       <p className="mt-0.5 text-sm text-gray-500">
                         Kargo ve vergiler eklenmemiş halidir.

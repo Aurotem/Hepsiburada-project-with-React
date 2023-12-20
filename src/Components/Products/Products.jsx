@@ -1,8 +1,7 @@
 import Product from "./Product";
 import product from "../../assets/data";
 
-export default function Products({ parameter = "" }) {
-  console.log(product)
+export default function Products({ parameter = "", setBasketValues, basketValues }) {
   function productGenerator(productArr, parameter) {
     let arr = [];
     productArr.forEach((e, i) => {
@@ -12,7 +11,7 @@ export default function Products({ parameter = "" }) {
         e.category.includes(parameter)
       ) {
         arr.push(
-          <Product key={"product:" + e.title} product={e} productIndex={i} />
+          <Product key={"product:" + e.title} product={e} productIndex={i} setBasketValues={setBasketValues} basketValues={basketValues} />
         );
       } else {
         return (
