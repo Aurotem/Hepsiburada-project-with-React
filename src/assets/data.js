@@ -14,7 +14,7 @@ let product = [
           "../../public/i91.jpeg",
           "../../public/i92.jpeg",
           "../../public/i93.jpeg",
-          "../../public/i94.jpeg",
+          "../../public/i94.jpeg"
       ]
   },
   {
@@ -31,7 +31,7 @@ let product = [
       "images": [
           "../../public/ix1.jpeg",
           "../../public/ix2.jpeg",
-          "../../public/ix3.jpeg",
+          "../../public/ix3.jpeg"
       ]
   },
   {
@@ -64,7 +64,7 @@ let product = [
           "../../public/f191.jpeg",
           "../../public/f192.jpeg",
           "../../public/f193.jpeg",
-          "../../public/f194.jpeg",
+          "../../public/f194.jpeg"
       ]
   },
   {
@@ -116,7 +116,7 @@ let product = [
       "images": [
           "../../public/sambook1.jpeg",
           "../../public/sambook2.jpeg",
-          "../../public/sambook3.jpeg",
+          "../../public/sambook3.jpeg"
       ]
   },
   {
@@ -134,7 +134,7 @@ let product = [
           "../../public/surface1.jpeg",
           "../../public/surface2.jpeg",
           "../../public/surface3.jpeg",
-          "../../public/surface4.jpeg",
+          "../../public/surface4.jpeg"
       ]
   },
   {
@@ -151,7 +151,7 @@ let product = [
       "images": [
           "../../public/infinix1.jpeg",
           "../../public/infinix2.png",
-          "../../public/infinix3.png",
+          "../../public/infinix3.png"
       ]
   },
   {
@@ -168,7 +168,7 @@ let product = [
       "images": [
           "../../public/hp1.jpeg",
           "../../public/hp2.jpeg",
-          "../../public/hp3.jpeg",
+          "../../public/hp3.jpeg"
       ]
   },
   {
@@ -185,7 +185,7 @@ let product = [
       "images": [
           "../../public/poil1.jpeg",
           "../../public/poil2.jpeg",
-          "../../public/poil3.jpeg",
+          "../../public/poil3.jpeg"
       ]
   },
   {
@@ -202,7 +202,7 @@ let product = [
       "images": [
           "../../public/royal1.jpeg",
           "../../public/royal2.jpeg",
-          "../../public/royal3.png",
+          "../../public/royal3.png"
       ]
   },
   {
@@ -237,7 +237,7 @@ let product = [
       "images": [
           "../../public/poil1.jpeg",
           "../../public/poil2.jpeg",
-          "../../public/poil3.jpeg",
+          "../../public/poil3.jpeg"
       ]
   },
   {
@@ -254,7 +254,7 @@ let product = [
       "images": [
           "../../public/perfume1.jpeg",
           "../../public/perfume2.jpeg",
-          "../../public/perfume3.jpeg",
+          "../../public/perfume3.jpeg"
       ]
   },
   {
@@ -271,7 +271,7 @@ let product = [
       "images": [
           "../../public/serum1.jpeg",
           "../../public/serum2.jpeg",
-          "../../public/serum3.png",
+          "../../public/serum3.png"
       ]
   },
   {
@@ -288,7 +288,7 @@ let product = [
       "images": [
           "../../public/oil1.jpeg",
           "../../public/oil2.jpeg",
-          "../../public/oil3.jpeg",
+          "../../public/oil3.jpeg"
       ]
   },
   {
@@ -306,7 +306,7 @@ let product = [
           "../../public/moist1.jpeg",
           "../../public/moist2.jpeg",
           "../../public/moist3.jpeg",
-          "../../public/moist4.jpeg",
+          "../../public/moist4.jpeg"
       ]
   },
   {
@@ -323,7 +323,7 @@ let product = [
       "images": [
         "../../public/serum1.jpeg",
         "../../public/serum2.jpeg",
-        "../../public/serum3.png",
+        "../../public/serum3.png"
       ]
   },
   {
@@ -426,7 +426,7 @@ let product = [
       "images": [
           "../../public/gulab1.png",
           "../../public/gulab2.jpeg",
-          "../../public/gulab3.png",
+          "../../public/gulab3.png"
       ]
   },
   {
@@ -445,7 +445,7 @@ let product = [
           "../../public/phanger2.jpeg",
           "../../public/phanger3.jpeg",
           "../../public/phanger4.jpeg",
-          "../../public/phanger5.jpeg",
+          "../../public/phanger5.jpeg"
       ]
   },
   {
@@ -480,7 +480,7 @@ let product = [
           "../../public/artlamb1.jpeg",
           "../../public/artlamb2.jpeg",
           "../../public/artlamb3.jpeg",
-          "../../public/artlamb4.jpeg",
+          "../../public/artlamb4.jpeg"
       ]
   },
   {
@@ -517,6 +517,6 @@ let product = [
           "../../public/keyholder3.jpeg"
       ]
   }
-]
+];
 
 export default product;
