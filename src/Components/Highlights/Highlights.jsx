@@ -11,13 +11,13 @@ export default function Highlights() {
       let randomProductImages = Math.floor(Math.random() * 30);
 
       let randomProduct = Math.floor(
-        Math.random() * productList.products[randomProductImages].images.length
+        Math.random() * productList[randomProductImages].images.length
       );
 
       highlightArray.push(
         <img
           key={"highlight" + randomProductImages + "-" + randomProduct}
-          src={productList.products[randomProductImages].images[randomProduct]}
+          src={productList[randomProductImages].images[randomProduct]}
           alt="highlight"
           className="h-full w-full"
         />

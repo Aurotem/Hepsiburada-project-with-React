@@ -97,9 +97,9 @@ let product = [
       "thumbnail": "https://i.dummyjson.com/data/products/6/thumbnail.png",
       "images": [
           "../../public/macbook1.png",
-          "../../public/macbook2.png",
+          "../../public/macbook2.jpeg",
           "../../public/macbook3.png",
-          "../../public/macbook4.png"
+          "../../public/macbook4.jpeg"
       ]
   },
   {
