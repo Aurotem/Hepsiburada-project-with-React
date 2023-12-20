@@ -1,30 +1,37 @@
 "use client";
 
-import { Carousel } from "flowbite-react";
-
 
 export default function CarouselDefault({ images }) {
   function imageGenerator(imageArray) {
     let arr = [];
     for (let i in imageArray) {
       arr.push(
-        <img
-          className="h-full relative"
-          key={"img" + i}
+        <div
+          key={
+            "productImage:"+
+            i +
+            "-" +
+            Math.random() * 100
+          }
+          className="duration-700 ease-in-out h-full w-full rounded flex"
+        >
+        <img draggable='false'
+          className="absolute block w-full h-full p-image"
           src={imageArray[i]}
           alt={"image" + i}
-        />
+        /></div>
       );
     }
     return arr;
   }
   return (
-    <Carousel
-      indicators={false}
-      leftControl=" "
-      rightControl=" "
+    <div
+      id="default-carousel"
+      className="relative"
     >
-      {imageGenerator(images)}
-    </Carousel>
+      <div className="relative h-44 overflow-scroll rounded-lg p-image">
+        {imageGenerator(images)}
+      </div>
+    </div>
   );
 }

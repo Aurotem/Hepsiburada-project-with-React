@@ -37,10 +37,15 @@ body {
   transform: translate(-50%, -50%);
   border-radius: 15px;
 }
+
 /*! Product Detail */
 .detail {
   z-index: 100;
   transform: translate(-50%, -50%);
   width: 800px;
   height: 600px;
+}
+
+.p-image::-webkit-scrollbar {
+display: none;
 }
