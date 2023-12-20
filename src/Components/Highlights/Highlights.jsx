@@ -28,7 +28,7 @@ export default function Highlights() {
           <img
             draggable="false"
             src={productList[randomProductImages].images[randomProduct]}
-            className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            className="absolute block w-full h-full"
             alt="highlight"
           />
         </div>
@@ -41,9 +41,8 @@ export default function Highlights() {
     <div
       id="default-carousel"
       className="relative w-2/3 mx-auto mt-10"
-      data-carousel="slide"
     >
-      <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+      <div className="relative h-56 overflow-scroll rounded-lg md:h-96 p-image">
         {highlightGenerator(product)}
       </div>
     </div>

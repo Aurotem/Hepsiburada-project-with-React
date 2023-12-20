@@ -11,7 +11,7 @@ export default function Products({ parameter = "", setBasketValues, basketValues
         e.category.includes(parameter)
       ) {
         arr.push(
-          <Product key={"product:" + e.title} product={e} productIndex={i} setBasketValues={setBasketValues} basketValues={basketValues} />
+          <Product height='h-44' key={"product:" + e.title} product={e} productIndex={i} setBasketValues={setBasketValues} basketValues={basketValues} />
         );
       } else {
         return (

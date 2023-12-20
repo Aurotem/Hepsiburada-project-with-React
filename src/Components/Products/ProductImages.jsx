@@ -1,7 +1,7 @@
 "use client";
 
 
-export default function CarouselDefault({ images }) {
+export default function CarouselDefault({ images, height }) {
   function imageGenerator(imageArray) {
     let arr = [];
     for (let i in imageArray) {
@@ -24,12 +24,13 @@ export default function CarouselDefault({ images }) {
     }
     return arr;
   }
+  let imgClasses = "relative " + height +  " overflow-scroll rounded-lg p-image"
   return (
     <div
       id="default-carousel"
       className="relative"
     >
-      <div className="relative h-44 overflow-scroll rounded-lg p-image">
+      <div className={imgClasses}>
         {imageGenerator(images)}
       </div>
     </div>

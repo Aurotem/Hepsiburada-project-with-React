@@ -4,7 +4,7 @@ import ProductImages from "./ProductImages";
 import Star from "./Star";
 import basket from "../../assets/basket";
 
-export default function Product({ product, setBasketValues, basketValues }) {
+export default function Product({ product, setBasketValues, basketValues, height }) {
   const [isOpened, setIsOpened] = useState(false);
   function handleAddToBasket(i) {
     for (let a in basketValues.items) {
@@ -49,8 +49,8 @@ export default function Product({ product, setBasketValues, basketValues }) {
 
   return !isOpened ? (
     <div className="w-72 max-w-sm bg-white border border-stone-200 rounded-lg shadow dark:bg-stone-800 dark:border-stone-700 mx-3 my-3 pb-2">
-      <div className="h-44 sm:h-52 xl:h-44 2xl:h-44 py-2 px-2">
-        <ProductImages images={product.images} />
+      <div className="h-52 sm:h-52 xl:h-52 2xl:h-52 py-2 px-2">
+        <ProductImages height={height} images={product.images} />
       </div>
 
       <div className="px-5 pb-1">
@@ -105,13 +105,13 @@ export default function Product({ product, setBasketValues, basketValues }) {
       >
         X
       </button>
-      <div className="flex">
-        <div className="w-56 h-72 sm:h-52 xl:h-44 2xl:h-44 py-2 px-2">
-          <ProductImages images={product.images} />
+      <div className="flex h-5/6 items-center justify-center">
+        <div className="w-2/3 h-2/3 sm:h-2/3 xl:h-2/3 2xl:h-2/3 py-2 px-2">
+          <ProductImages height='h-96' images={product.images} />
         </div>
 
-        <div className="px-5 pb-1">
-          <button className="text-left" onClick={() => detailsPage(product)}>
+        <div className="px-5 pb-1 h-1/2">
+          <button className="text-left" onClick={detailsPage}>
             <h5 className="text-xl tracking-tight text-gray-900 dark:text-white mb-2">
               {product.brand}
             </h5>
@@ -122,7 +122,7 @@ export default function Product({ product, setBasketValues, basketValues }) {
               {product.description}
             </p>
           </button>
-          <div className="flex items-center mt-5 mb-2.5">
+          <div className="flex items-center mt-5 mb-2.5 h-1/2">
             <div className="flex items-center space-x-1 rtl:space-x-reverse">
               {calcStars(Math.round(product.rating))}
             </div>
@@ -135,13 +135,13 @@ export default function Product({ product, setBasketValues, basketValues }) {
               <span className="text-3xl font-bold text-gray-900 dark:text-white">
                 ${product.price}
               </span>
-              <span className="bg-green-100 text-green-800 text-xs font-semibold px-1.5 py-0.5 rounded dark:bg-green-200 dark:text-green-800 text-center w-1/2 h-fit ml-auto">
+              <span className="bg-green-100 text-green-800 text-xs font-semibold px-1.5 py-0.5 rounded dark:bg-green-200 dark:text-green-800 text-center w-36 h-fit ml-auto">
                 {product.discountPercentage + "% Discount!"}
               </span>
             </div>
             <button
               onClick={() => handleAddToBasket(product)}
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-full"
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-full bottom-0"
             >
               Add to cart
             </button>
